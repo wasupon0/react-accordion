@@ -4,7 +4,7 @@ import Chevron from "./chevron.svg";
 
 export default function Accordion() {
   const [toggle, setToggle] = useState(false);
-  const [heightEl, setHeightEl] = useState();
+  const [heightEl, setHeightEl] = useState("0px");
 
   const refHeight = useRef();
 
@@ -22,7 +22,7 @@ export default function Accordion() {
         <span>Lorem ipsum dolor sit amet.</span>
         <img
           id="chevron"
-          className={toggle && "active"}
+          className={toggle ? "active" : undefined}
           src={Chevron}
           alt="chevron icon"
         />
